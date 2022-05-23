@@ -20,6 +20,11 @@ html {
     font-weight: 400;
 }
 
+.no-select {
+    cursor: text;
+    color: var(--white-color);
+}
+
 .seperator::after {
     content: "";
     display: block;
