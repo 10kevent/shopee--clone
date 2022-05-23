@@ -18,8 +18,26 @@
         <header class="header">
             <div class="grid">
                 <nav class="header__navbar">
+
+                    <!-- Left component -->
                     <ul class="header__navlist">
-                        <li class="header__navlist-item seperator">Vào cửa hàng trên ứng dụng F8-shop</li>
+                        <li class="header__navlist-item header--showqr seperator">
+                            Vào cửa hàng trên ứng dụng F8-shop
+                            
+                            <!-- Header QR Code -->
+                            <div class="header__qr">
+                                <img src="./assets/img/qr_code.png" alt="QR Code" class="header__qr-img">
+                                <div class="header__qr-app">
+                                    <a href="" class="header__qr-applink">
+                                        <img src="./assets/img/google_play.png" alt="Google Play" class="header__qr-app--dwnl">
+                                    </a>
+                                    <a href="" class="header__qr-applink">
+                                        <img src="./assets/img/app_store.png" alt="App Store" class="header__qr-app--dwnl">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </li>
                         <li class="header__navlist-item">
                             <span class="no-select">Kết nối</span>
                             <a href="#" class="header__navbar-iconlink">
@@ -30,7 +48,8 @@
                             </a>
                         </li>
                     </ul>
-    
+                    
+                    <!-- Right component -->
                     <ul class="header__navlist">
                         <li class="header__navlist-item">
                             <a href="#" class="header__navbar-iconlink">
@@ -47,6 +66,7 @@
                         <li class="header__navlist-item strong seperator">Đăng kí</li>
                         <li class="header__navlist-item strong">Đăng nhập</li>
                     </ul>
+                    
                 </nav>
             </div>
         </header>

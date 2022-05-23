@@ -17,6 +17,7 @@
 .header__navlist-item {
     margin: 0 8px;
     position: relative;
+    max-height: 28px;
 }
 
 .header__navbar-iconlink {
@@ -26,7 +27,7 @@
 }
 
 .header__navbar-icon {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     text-decoration: none;
     color: var(--white-color);
     padding: 0 4px;
@@ -39,7 +40,7 @@
 .header__navlist-item,
 .header__navlist--itemlink {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
@@ -56,4 +57,53 @@
 .header__navbar-icon {
     display: inline-flex;
     align-items: center;
+}
+
+/* Header qr code section */
+.header__qr {
+    width: 186px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 160%;
+    border-radius: 2px;
+    padding: 8px;
+    display: none;
+    animation: fadeIn ease-in .3s;
+}
+
+.header__qr::before {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -60%;
+    height: 60%;
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+    display: block;  
+}
+
+.header--showqr:hover .header__qr {
+    display: block;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-app {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr-applink {
+    margin-left: 11px;
+}
+
+.header__qr-applink:last-child {
+    margin-right: 11px;
+}
+
+.header__qr-app--dwnl {
+    height: 15px;
 }
