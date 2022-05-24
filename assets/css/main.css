@@ -137,6 +137,26 @@
     display: none;
 }
 
+.header__notify::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 28px;
+    top: -30px;
+    right: 2px; 
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 105px;
+    height: 20px;
+    right: 0;
+    top: -20px;
+}
+
 .header__notify-head {
     height: 40px;
     background-color: var(--white-color);
@@ -209,4 +229,105 @@
     color: var(--black-color);
     margin: auto;
     font-weight: 400;
+}
+
+/* Authentication form */
+
+.authenti-form {
+    width: 500px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.authenti-form__container {
+    padding: 8px 32px;
+}
+
+.authenti-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.authenti-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--black-color);
+}
+
+.authenti-form__switch-btn {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.authenti-form__input {
+    width: 100%;
+    height: 40px;
+    font-size: 1.4rem;
+    margin-top: 16px;
+    padding: 0 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.authenti-form__input:focus {
+    border-color: #888;
+}
+
+.authenti-form__additional {
+    margin-top: 20px;
+}
+
+.authenti-form__policy {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    text-align: center;
+    padding: 0 12px;
+    font-weight: 450;
+}   
+
+.authenti-form__link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.authenti-form__controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px;
+}
+
+.authenti-form__social {
+    background-color: #f5f5f5;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.authenti-form__icon {
+    font-size: 1.8rem;
+    margin: 0 8px;
+}
+
+.social--fb {
+    color: var(--white-color);
+    background-color: #3a5a98;
+}
+
+.social--fb.authenti-form__icon {
+    color: var(--white-color);
+}
+
+.social--gg.authenti-form__icon {
+    color: #666;
+}
+
+.form-social__text {
+    margin: 0 auto;
+    line-height: 30px;
 }

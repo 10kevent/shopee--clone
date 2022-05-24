@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1afd3b53e9.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Kinda shopee clone</title>
 </head>
 <body>
     <div class="app">
@@ -138,6 +138,60 @@
         <footer class="footer">
 
         </footer>
+    </div>
+
+    <!-- Modal layout -->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+
+            <!-- Authenticated form -->
+            <div class="authenti-form">
+                
+                <div class="authenti-form__container">
+                    <div class="authenti-form__header">
+                        <h3 class="authenti-form__heading">Đăng kí</h3>
+                        <span class="authenti-form__switch-btn">Đăng nhập</span>
+                    </div>
+
+                    <div class="authenti-form__mainform">
+                        <div class="authenti-form__line">
+                            <input type="text" class="authenti-form__input" placeholder="Số điện thoại">
+                        </div>
+                        <div class="authenti-form__line">
+                            <input type="text" class="authenti-form__input" placeholder="Mật khẩu">
+                        </div>
+                        <div class="authenti-form__line">
+                            <input type="text" class="authenti-form__input" placeholder="Nhập lại mật khẩu của bạn">
+                        </div>
+                    </div>
+
+                    <div class="authenti-form__additional">
+                        <p class="authenti-form__policy">
+                            Bằng việc đăng kí, bạn đã đồng ý về
+                            <a href="" class="authenti-form__link">Điều khoản dịch vụ</a> &
+                            <a href="" class="authenti-form__link">Chính sách bảo mật</a>
+                        </p> 
+                    </div>
+
+                    <div class="authenti-form__controls">
+                        <button class="btn btn-norm">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÍ</button>
+                    </div>
+                </div>
+
+                <div class="authenti-form__social">
+                    <a href="" class="btn btn--with-icon social--fb">
+                        <i class="fa-brands authenti-form__icon fa-facebook-square"></i>
+                        <span class="form-social__text">Kết nối với Facebook</span>
+                    </a>
+                    <a href="" class="btn btn--with-icon social--gg">
+                        <i class="fa-brands authenti-form__icon fa-google"></i>
+                        <span class="form-social__text">Kết nối với Google</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
