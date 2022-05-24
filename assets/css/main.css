@@ -110,6 +110,21 @@
 
 /* notifications */
 
+@keyframes headerNotifyGrow {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header--shownotify:hover .header__notify {
+    display: block;
+}
+
 .header__notify {
     position: absolute;
     top: 160%;
@@ -117,6 +132,9 @@
     width: 404px;
     background-color: var(--white-color);
     border: 1px solid #d3d3d3;
+    transform-origin: calc(100% - 30px) top;
+    animation: headerNotifyGrow ease-in .25s;
+    display: none;
 }
 
 .header__notify-head {
