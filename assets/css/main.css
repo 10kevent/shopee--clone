@@ -364,6 +364,7 @@
     height: var(--header-with-search-height);
     display: flex;
     align-items: center;
+    margin: 0 8px;
 }
 
 .header__logo {
@@ -380,7 +381,130 @@
     height: 40px;
     flex: 1;
     border-radius: 2px;
+    display: flex;
+    align-items: center;
 }
+
+.header__search-inp {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 0 16px;
+    border-radius: 2px;
+}
+
+.header__search-select {
+    padding: 13px 0 13px 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__search-select::before {
+    content: "";
+    display: block;
+    border-left: 1px solid #ccc;
+    height: 9px;
+    position: absolute;
+    padding: 6px;
+    left: 5px;
+    top: 10px;
+}
+
+.header__search-select:hover .header__search-options {
+    display: block;
+}
+
+.header__search-options {
+    /* display: none; */
+    position: absolute;
+    right: 0;
+    top: 100%;
+    list-style: none;
+    margin: 0;
+    margin-top: 4px;
+    width: 130px;
+    border-radius: 2px;
+    padding: 0;
+    box-shadow: 0px 1px 3px #ccc;
+}
+
+.header__search-options::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: -4px;
+}
+
+.header__search-options-item {
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 12px 8px 12px;
+}
+
+.header__search-options-item:hover {
+    background-color: #fafafa;
+}
+
+.header__search-options-item span {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-left: 7px;
+
+}
+
+.header__search-options-item i {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-left: 12px;
+    display: none;
+}
+
+/* tick */
+.header__search-options-item--active i {
+    display: inline-block;
+}
+
+.select-icon,
+.select-label {
+    font-size: 1.3rem;
+}
+
+.select-label {
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.select-icon {
+    color: #4a4a4a;
+    padding: 0 16px;
+}
+
+.header__search-btn {
+    background-color: var(--primary-color);
+    border: none;
+    height: 34px;
+    width: 60px;
+    border-radius: 2px;
+    margin-right: 3px;
+    padding: 0 6px;
+    outline: none;
+    cursor: pointer;
+}
+
+.header__search-btn-icon {
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+
+.header__search-btn:hover {
+    background-color: #e76349;
+}
+
 
 .header__cart {
     width: 150px;
