@@ -136,6 +136,7 @@
     transform-origin: calc(100% - 30px) top;
     animation: headerNotifyGrow ease-in .25s;
     display: none;
+    z-index: 1;
 }
 
 .header__notify::before {
@@ -376,6 +377,8 @@
     color: var(--white-color);
 }
 
+/* Search section */
+
 .header__search {
     background-color: var(--white-color);
     height: 40px;
@@ -385,9 +388,15 @@
     align-items: center;
 }
 
-.header__search-inp {
+.header__search-main {
+    position: relative;
     flex: 1;
     height: 100%;
+}
+
+.header__search-inp {
+    height: 100%;
+    width: 100%;
     border: none;
     outline: none;
     font-size: 1.4rem;
@@ -396,6 +405,57 @@
     border-radius: 2px;
 }
 
+/* Search history */
+
+/* show search history */
+.header__search-inp:focus ~ .header__search-history {
+    display: block;
+}
+
+.header__search-history {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: calc(100% - 20px);
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgb(172, 172, 172);
+    overflow: hidden;
+}
+
+.header__search-history--heading {
+    margin: 12px 12px;
+    font-size: 1.4rem;
+    color: #999;
+    font-weight: 400;
+}
+
+.header__search-history--list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header__search-history--item {
+    height: 38px;
+    padding: 0 12px;
+}
+
+.header__search-history--item:hover {
+    cursor: pointer;
+    background-color: #fafafa;
+}
+
+.header__search-history-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 38px;
+}
+
+
+/* Search mode select */
 .header__search-select {
     padding: 13px 0 13px 16px;
     cursor: pointer;
@@ -418,7 +478,7 @@
 }
 
 .header__search-options {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 0;
     top: 100%;
@@ -512,7 +572,9 @@
 }
 
 .header__cart-icon {
+    cursor: pointer;
     color: var(--white-color);
     font-size: 2.4rem;
     margin-top: 6px;
+    padding: 10px;
 }
