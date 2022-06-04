@@ -13,6 +13,7 @@
     padding-left: 0;
     margin-top: 8px;
     margin-bottom: 0;
+    display: flex;
 }
 
 .header__navlist-item {
@@ -21,9 +22,94 @@
     max-height: 28px;
 }
 
+.header__navlist-user {
+    justify-content: center;
+    align-items: center;
+}
+
+.header__navlist-user-ava {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+
+}
+
+.header__navlist-user-name {
+    margin-left: 8px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    text-align: center;
+}
+
+/* User menu style */
+
+.header__navlist-user:hover .header__navlist-user-menu {
+    display: block;
+}
+
+.header__navlist-user-menu {
+    display: none;
+    position: absolute;
+    top: calc(120% + 4px);
+    right: 0;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    list-style: none;
+    width: 160px;
+    z-index: 1;
+    padding: 0;
+    box-shadow: 0px 1px 2px #e0e0e0;
+}
+
+.header__navlist-user-menu::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 28px;
+    top: -30px;
+    right: 2px; 
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__navlist-user-menu::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -12px;
+    right: 0;
+    width: 90px;
+    height: 12px;
+    background-color: transparent;
+}
+
+.user-menu-item a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.user-menu-item a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.user-menu-item a {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+}
+
+.user-menu-item a:hover {
+    background-color: #fafafa;
+}
+
+/* User menu end */
+
 .header__navbar-iconlink {
     text-decoration: none;
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 
@@ -56,9 +142,10 @@
 .header__navlist-item,
 .header__navbar-iconlink,
 .header__navbar-icon {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
+
 
 /* Header qr code section */
 .header__qr {
@@ -489,7 +576,7 @@
     width: 130px;
     border-radius: 2px;
     padding: 0;
-    box-shadow: 0px 1px 3px #ccc;
+    box-shadow: 0px 1px 2px #e0e0e0;
 }
 
 .header__search-options::before {
@@ -617,7 +704,7 @@
 }
 
 .header__cart-list {
-    /* display: none; */
+    display: none;
     cursor: default;
     position: absolute;
     top: 100%;
