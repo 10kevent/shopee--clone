@@ -871,6 +871,7 @@
     color: var(--text-color);
     padding: 12px 16px;
     border-bottom: 1px solid rgba(0, 0, 0, .05);
+    margin-top: 0px;
 }
 
 .category__heading-icon {
@@ -917,4 +918,12 @@
 .category-item__link:not(.category-item--active):hover {
     color: var(--primary-color);
     right: -4px;
+}
+
+/* Home sort + filter */
+
+
+
+.home-filter__page-btn {
+    text-decoration: none;
 }
