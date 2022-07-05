@@ -22,6 +22,14 @@ html {
     box-sizing: border-box;
 }
 
+/* margin/padding utility */
+
+.pt-32 {
+    padding-top: 32px;
+}
+
+/* margin/padding utility end */
+
 .strong {
     font-weight: 400;
 }
@@ -132,7 +140,7 @@ html {
     color: var(--text-color);
     background-color: var(--white-color);
     margin-left: 8px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 0;
